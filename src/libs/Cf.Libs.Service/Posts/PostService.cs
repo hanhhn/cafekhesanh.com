@@ -7,7 +7,7 @@ using Cf.Libs.DataAccess.Entities.News;
 using Cf.Libs.DataAccess.Repository.Posts;
 using Cf.Libs.DataAccess.Repository.Settings;
 using Cf.Libs.DataAccess.Repository.Tags;
-using Cf.Libs.Service.Dtos.Post;
+using Cf.Libs.DataAccess.Dtos.Post;
 using System;
 using System.Linq;
 

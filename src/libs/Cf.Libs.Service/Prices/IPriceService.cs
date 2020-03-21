@@ -1,5 +1,5 @@
 ﻿using Cf.Libs.Core.Infrastructure.Paging;
-using Cf.Libs.Service.Dtos.Price;
+using Cf.Libs.DataAccess.Dtos.Price;
 
 namespace Cf.Libs.Service.Prices
 {

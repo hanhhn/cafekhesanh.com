@@ -7,7 +7,7 @@ using Cf.Libs.DataAccess.Repository.Addresses;
 using Cf.Libs.DataAccess.Repository.Districts;
 using Cf.Libs.DataAccess.Repository.Provinces;
 using Cf.Libs.DataAccess.Repository.Wards;
-using Cf.Libs.Service.Dtos.Adress;
+using Cf.Libs.DataAccess.Dtos.Adress;
 using System.Collections.Generic;
 using System.Linq;
 

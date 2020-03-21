@@ -2,7 +2,7 @@
 using Cf.Libs.Core.Infrastructure.Paging;
 using Cf.Libs.Core.Infrastructure.Service;
 using Cf.Libs.Core.Infrastructure.UnitOfWork;
-using Cf.Libs.Service.Dtos.Order;
+using Cf.Libs.DataAccess.Dtos.Order;
 using System;
 
 namespace Cf.Libs.Service.Orders

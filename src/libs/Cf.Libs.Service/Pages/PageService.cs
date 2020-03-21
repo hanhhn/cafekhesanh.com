@@ -6,7 +6,7 @@ using Cf.Libs.Core.Infrastructure.UnitOfWork;
 using Cf.Libs.DataAccess.Repository.Pages;
 using Cf.Libs.DataAccess.Repository.Settings;
 using Cf.Libs.DataAccess.Repository.Tags;
-using Cf.Libs.Service.Dtos.Page;
+using Cf.Libs.DataAccess.Dtos.Page;
 using System;
 using System.Linq;
 

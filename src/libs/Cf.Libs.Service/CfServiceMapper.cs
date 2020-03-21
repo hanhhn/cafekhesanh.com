@@ -5,17 +5,17 @@ using Cf.Libs.DataAccess.Entities.Common;
 using Cf.Libs.DataAccess.Entities.Items;
 using Cf.Libs.DataAccess.Entities.News;
 using Cf.Libs.DataAccess.Entities.Orders;
-using Cf.Libs.Service.Dtos.Adress;
-using Cf.Libs.Service.Dtos.Billing;
-using Cf.Libs.Service.Dtos.Contact;
-using Cf.Libs.Service.Dtos.Item;
-using Cf.Libs.Service.Dtos.Method;
-using Cf.Libs.Service.Dtos.Order;
-using Cf.Libs.Service.Dtos.Page;
-using Cf.Libs.Service.Dtos.Post;
-using Cf.Libs.Service.Dtos.Price;
-using Cf.Libs.Service.Dtos.Setting;
-using Cf.Libs.Service.Dtos.Tracking;
+using Cf.Libs.DataAccess.Dtos.Adress;
+using Cf.Libs.DataAccess.Dtos.Billing;
+using Cf.Libs.DataAccess.Dtos.Contact;
+using Cf.Libs.DataAccess.Dtos.Item;
+using Cf.Libs.DataAccess.Dtos.Method;
+using Cf.Libs.DataAccess.Dtos.Order;
+using Cf.Libs.DataAccess.Dtos.Page;
+using Cf.Libs.DataAccess.Dtos.Post;
+using Cf.Libs.DataAccess.Dtos.Price;
+using Cf.Libs.DataAccess.Dtos.Setting;
+using Cf.Libs.DataAccess.Dtos.Tracking;
 
 namespace Cf.Libs.Service
 {

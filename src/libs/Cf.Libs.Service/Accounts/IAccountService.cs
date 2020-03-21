@@ -1,5 +1,5 @@
 ﻿using Cf.Libs.Core.Infrastructure.Service;
-using Cf.Libs.Service.Dtos.Account;
+using Cf.Libs.DataAccess.Dtos.Account;
 using System.Threading.Tasks;
 
 namespace Cf.Libs.Service.Accounts

@@ -1,5 +1,5 @@
 ﻿using Cf.Libs.Core.Infrastructure.Service;
-using Cf.Libs.Service.Dtos.Adress;
+using Cf.Libs.DataAccess.Dtos.Adress;
 using System.Collections.Generic;
 
 namespace Cf.Libs.Service.Addresses

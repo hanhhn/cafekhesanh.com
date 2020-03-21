@@ -1,5 +1,5 @@
 ﻿using Cf.Libs.Core.Infrastructure.Service;
-using Cf.Libs.Service.Dtos.Tracking;
+using Cf.Libs.DataAccess.Dtos.Tracking;
 
 namespace Cf.Libs.Service.Trackings
 {

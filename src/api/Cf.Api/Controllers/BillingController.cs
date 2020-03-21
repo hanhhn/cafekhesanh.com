@@ -1,5 +1,5 @@
 ﻿using Cf.Libs.Service.Billings;
-using Cf.Libs.Service.Dtos.Billing;
+using Cf.Libs.DataAccess.Dtos.Billing;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cf.Api.Controllers

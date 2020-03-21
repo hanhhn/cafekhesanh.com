@@ -1,6 +1,6 @@
 ﻿using Cf.Libs.Core.Infrastructure.Paging;
 using Cf.Libs.Core.Infrastructure.Service;
-using Cf.Libs.Service.Dtos.Page;
+using Cf.Libs.DataAccess.Dtos.Page;
 
 namespace Cf.Libs.Service.Pages
 {

@@ -1,4 +1,4 @@
-﻿using Cf.Libs.Service.Dtos.Tracking;
+﻿using Cf.Libs.DataAccess.Dtos.Tracking;
 using Cf.Libs.Service.Trackings;
 using Microsoft.AspNetCore.Mvc;
 

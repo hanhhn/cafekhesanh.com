@@ -1,5 +1,5 @@
 ﻿using Cf.Libs.Core.Infrastructure.Paging;
-using Cf.Libs.Service.Dtos.Page;
+using Cf.Libs.DataAccess.Dtos.Page;
 using Cf.Libs.Service.Pages;
 using Microsoft.AspNetCore.Mvc;
 using System;

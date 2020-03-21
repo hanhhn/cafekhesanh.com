@@ -10,7 +10,7 @@ using Cf.Libs.DataAccess.Repository.OrderDetails;
 using Cf.Libs.DataAccess.Repository.Orders;
 using Cf.Libs.DataAccess.Repository.Prices;
 using Cf.Libs.DataAccess.Repository.Trackings;
-using Cf.Libs.Service.Dtos.Billing;
+using Cf.Libs.DataAccess.Dtos.Billing;
 using System;
 using System.Collections.Generic;
 using System.Linq;

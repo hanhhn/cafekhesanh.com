@@ -1,6 +1,6 @@
 ﻿using Cf.Libs.Core.Infrastructure.Paging;
 using Cf.Libs.Core.Infrastructure.Service;
-using Cf.Libs.Service.Dtos.Post;
+using Cf.Libs.DataAccess.Dtos.Post;
 
 namespace Cf.Libs.Service.Posts
 {

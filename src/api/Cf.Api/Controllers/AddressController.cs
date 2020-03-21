@@ -1,5 +1,5 @@
 ﻿using Cf.Libs.Service.Addresses;
-using Cf.Libs.Service.Dtos.Adress;
+using Cf.Libs.DataAccess.Dtos.Adress;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

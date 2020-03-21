@@ -1,5 +1,5 @@
 ﻿using Cf.Libs.Core.Infrastructure.Paging;
-using Cf.Libs.Service.Dtos.Post;
+using Cf.Libs.DataAccess.Dtos.Post;
 using Cf.Libs.Service.Posts;
 using Microsoft.AspNetCore.Mvc;
 using System;

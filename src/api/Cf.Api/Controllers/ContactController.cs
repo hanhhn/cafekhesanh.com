@@ -1,5 +1,5 @@
 ﻿using Cf.Libs.Service.Contacts;
-using Cf.Libs.Service.Dtos.Contact;
+using Cf.Libs.DataAccess.Dtos.Contact;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cf.Api.Controllers

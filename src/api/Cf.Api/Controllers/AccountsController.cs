@@ -1,5 +1,5 @@
 ﻿using Cf.Libs.Service.Accounts;
-using Cf.Libs.Service.Dtos.Account;
+using Cf.Libs.DataAccess.Dtos.Account;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;

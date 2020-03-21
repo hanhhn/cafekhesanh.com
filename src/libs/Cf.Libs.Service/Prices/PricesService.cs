@@ -2,7 +2,7 @@
 using Cf.Libs.Core.Infrastructure.Paging;
 using Cf.Libs.Core.Infrastructure.Service;
 using Cf.Libs.Core.Infrastructure.UnitOfWork;
-using Cf.Libs.Service.Dtos.Price;
+using Cf.Libs.DataAccess.Dtos.Price;
 using System;
 
 namespace Cf.Libs.Service.Prices

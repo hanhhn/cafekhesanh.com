@@ -1,5 +1,5 @@
 ﻿using Cf.Libs.Core.Infrastructure.Service;
-using Cf.Libs.Service.Dtos.Billing;
+using Cf.Libs.DataAccess.Dtos.Billing;
 
 namespace Cf.Libs.Service.Billings
 {
