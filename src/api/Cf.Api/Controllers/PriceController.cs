@@ -6,13 +6,13 @@ using System;
 
 namespace Cf.Api.Controllers
 {
-    [Route("api/prices")]
+    [Route("api/price")]
     [ApiController]
-    public class PricesController : ControllerBase
+    public class PriceController : ControllerBase
     {
         private readonly IPriceService _rateService;
 
-        public PricesController(IPriceService rateService)
+        public PriceController(IPriceService rateService)
         {
             _rateService = rateService;
         }

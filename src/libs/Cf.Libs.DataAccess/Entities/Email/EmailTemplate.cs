@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Cf.Libs.DataAccess.Entities.Email
 {
-    class EmailTemplate
+	public class EmailTemplate
     {
     }
 }

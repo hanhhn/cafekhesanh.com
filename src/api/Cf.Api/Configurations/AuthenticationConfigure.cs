@@ -64,10 +64,10 @@ namespace Cf.Api.Configurations
 			{
 				// Default Cookie settings
 				options.Cookie.HttpOnly = true;
-				options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+				options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
 
-				options.LoginPath = "/api/accounts/signin";
-				options.AccessDeniedPath = "/api/accounts/accessdenied";
+				options.LoginPath = "/api/account/ssignin";
+				options.AccessDeniedPath = "/api/account/accessdenied";
 				options.SlidingExpiration = true;
 			});
 

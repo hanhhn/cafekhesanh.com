@@ -4,13 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Cf.Api.Controllers
 {
-    [Route("api/trackings")]
+    [Route("api/tracking")]
     [ApiController]
-    public class TrackingsController : ControllerBase
+    public class TrackingController : ControllerBase
     {
         private readonly ITrackingService _trackingService;
 
-        public TrackingsController(ITrackingService trackingService)
+        public TrackingController(ITrackingService trackingService)
         {
             _trackingService = trackingService;
         }

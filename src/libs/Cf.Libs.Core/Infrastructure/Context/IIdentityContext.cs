@@ -6,5 +6,6 @@ namespace Cf.Libs.Core.Infrastructure.Context
 {
     public interface IIdentityContext
     {
-    }
+		string LoggedUser();
+	}
 }

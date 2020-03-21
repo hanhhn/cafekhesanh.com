@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
 using Cf.Libs.Core.Infrastructure.Engine;
-using Cf.Libs.Service.Orders;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cf.Api.Controllers
 {
-    [Route("api/values")]
+	[Route("api/values")]
     [ApiController]
     public class ValuesController : ControllerBase
     {

@@ -6,13 +6,13 @@ using System;
 
 namespace Cf.Api.Controllers
 {
-    [Route("api/pages")]
+    [Route("api/page")]
     [ApiController]
-    public class PagesController : ControllerBase
+    public class PageController : ControllerBase
     {
         private readonly IPageService _service;
 
-        public PagesController(IPageService service)
+        public PageController(IPageService service)
         {
             _service = service;
         }

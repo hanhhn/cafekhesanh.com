@@ -7,13 +7,13 @@ using System.Collections.Generic;
 
 namespace Cf.Api.Controllers
 {
-    [Route("api/posts")]
+    [Route("api/post")]
     [ApiController]
-    public class PostsController : ControllerBase
+    public class PostController : ControllerBase
     {
         private readonly IPostService _service;
 
-        public PostsController(IPostService service)
+        public PostController(IPostService service)
         {
             _service = service;
         }

@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Cf.Libs.Core.Infrastructure.Entity;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Cf.Libs.DataAccess.Entities.Items
+namespace Cf.Libs.DataAccess.Entities.Resource
 {
-	public class ProductGallery
+	public class File : BaseEntity<int>
 	{
 		public string Url { get; set; }
-		public string Thumb { get; set; }
 		public int Size { get; set; }
 		public string Format { get; set; }
 	}

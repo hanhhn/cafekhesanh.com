@@ -6,13 +6,13 @@ using System;
 
 namespace Cf.Api.Controllers
 {
-    [Route("api/orders")]
+    [Route("api/order")]
     [ApiController]
-    public class OrdersController : ControllerBase
+    public class OrderController : ControllerBase
     {
         private readonly IOrderService _orderService;
 
-        public OrdersController(IOrderService orderService)
+        public OrderController(IOrderService orderService)
         {
             _orderService = orderService;
         }

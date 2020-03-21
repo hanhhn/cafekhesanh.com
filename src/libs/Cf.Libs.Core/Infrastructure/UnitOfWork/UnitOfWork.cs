@@ -1,4 +1,5 @@
 ﻿using Cf.Libs.Core.Exeptions;
+using Cf.Libs.Core.Infrastructure.Context;
 using Cf.Libs.Core.Infrastructure.Entity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,11 +11,13 @@ namespace Cf.Libs.Core.Infrastructure.UnitOfWork
          where TContext : DbContext
     {
         private readonly DbContext _context;
+		private readonly IIdentityContext _identity;
 
-        public UnitOfWork(TContext context)
+		public UnitOfWork(TContext context, IIdentityContext identity)
         {
             _context = context;
-        }
+			_identity = identity;
+		}
 
         public int SaveChanges()
         {
@@ -27,15 +30,16 @@ namespace Cf.Libs.Core.Infrastructure.UnitOfWork
                     if (entity == null)
                         continue;
 
-                    if (dbEntity.State == EntityState.Added)
+					var logged = _identity.LoggedUser() ?? "system";
+					if (dbEntity.State == EntityState.Added)
                     {
-                        entity.Default(true, "system");
+                        entity.Default(true, logged);
                         continue;
                     }
 
                     if (dbEntity.State == EntityState.Modified)
                     {
-                        entity.Default(false, "system");
+                        entity.Default(false, logged);
                     }
                 }
             }
