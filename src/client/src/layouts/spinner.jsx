@@ -1,5 +1,5 @@
 import * as React from "react";
-import { showSpinner, hideSpinner } from "../../src/cores/helpers/utils";
+import { showSpinner, hideSpinner } from "../cores/helpers/utils";
 
 export class Spinner extends React.Component {
   componentWillMount() {

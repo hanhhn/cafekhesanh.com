@@ -1,26 +1,14 @@
-export function formatDate(date: Date, format: string) {
+export function formatDate(date, format) {
   switch (format) {
     case "dd/MM/yyyy":
-      return (
-        paddingNumer(date.getDate()) +
-        "/" +
-        paddingNumer(date.getMonth() + 1) +
-        "/" +
-        date.getFullYear()
-      );
+      return paddingNumer(date.getDate()) + "/" + paddingNumer(date.getMonth() + 1) + "/" + date.getFullYear();
 
     default:
-      return (
-        paddingNumer(date.getDate()) +
-        "-" +
-        paddingNumer(date.getMonth() + 1) +
-        "-" +
-        date.getFullYear()
-      );
+      return paddingNumer(date.getDate()) + "-" + paddingNumer(date.getMonth() + 1) + "-" + date.getFullYear();
   }
 }
 
-export function dateConverter(date: Date) {
+export function dateConverter(date) {
   var cur = new Date();
   if (typeof date !== typeof cur) {
     return "Hôm nay";
@@ -37,11 +25,11 @@ export function dateConverter(date: Date) {
   return formatDate(date, "dd/MM/yyyy");
 }
 
-export function fromDate(value: any) {
+export function fromDate(value) {
   return new Date(value);
 }
 
-export function paddingNumer(num: number) {
+export function paddingNumer(num) {
   if (num < 10) {
     return "0" + num;
   }
@@ -49,7 +37,7 @@ export function paddingNumer(num: number) {
   return num + "";
 }
 
-export function getDate(date: Date) {
+export function getDate(date) {
   const day = date.getDate(); // yields date
   const month = date.getMonth() + 1; // yields month (add one as '.getMonth()' is zero indexed)
   const year = date.getFullYear(); // yields year
@@ -58,12 +46,10 @@ export function getDate(date: Date) {
   const second = date.getSeconds(); // yields seconds
 
   // After this construct a string with the above results as below
-  return (
-    month + "/" + day + "/" + year + " " + hour + ":" + minute + ":" + second
-  );
+  return month + "/" + day + "/" + year + " " + hour + ":" + minute + ":" + second;
 }
 
-export function vnToEn(str: string) {
+export function vnToEn(str) {
   str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
   str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
   str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
@@ -84,7 +70,7 @@ export function vnToEn(str: string) {
   return str;
 }
 
-export function toQueryString(obj: any) {
+export function toQueryString(obj) {
   if (obj) {
     const str = [];
     for (const p in obj) {
@@ -97,7 +83,7 @@ export function toQueryString(obj: any) {
   }
 }
 
-export function kConverter(value: any) {
+export function kConverter(value) {
   if (value === "" || value === null || value === undefined) {
     return "0k";
   }
@@ -106,12 +92,10 @@ export function kConverter(value: any) {
     return "0k";
   }
 
-  return (
-    (value / 1000).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$&,") + "k"
-  );
+  return (value / 1000).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$&,") + "k";
 }
 
-export function currencyConverter(value: any) {
+export function currencyConverter(value) {
   if (value === "" || value === null || value === undefined) {
     return "0 đ";
   }

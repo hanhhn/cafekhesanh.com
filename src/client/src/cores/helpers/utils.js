@@ -1,4 +1,4 @@
-declare const window: any;
+// declare const window: any;
 
 export function showSpinner() {
   const blockUI = window.blockUI;

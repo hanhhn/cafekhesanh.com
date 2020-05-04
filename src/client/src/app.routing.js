@@ -1,11 +1,9 @@
 import * as React from "react";
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Spinner } from "./layouts/spinner";
 
-const Login = React.lazy(() => import("./pages/login"));
-const Home = React.lazy(() => import("./pages/home"));
-const PermissionDenied = React.lazy(() => import("./pages/error/permission-denied"));
-const NotFound = React.lazy(() => import("./pages/error/not-found"));
+const DefaultLayout = React.lazy(() => import("./layouts/default.layout"));
+const AdminLayout = React.lazy(() => import("./layouts/admin.layout"));
 
 export default class Routing extends React.Component {
   render() {
@@ -13,14 +11,8 @@ export default class Routing extends React.Component {
       <BrowserRouter>
         <React.Suspense fallback={<Spinner />}>
           <Switch>
-            <Route exact path="/">
-              <Redirect to="/home" />
-            </Route>
-            <Route path="/login" render={props => <Login {...props} />} />
-            <Route path="/home" render={props => <Home {...props} />} />
-
-            <Route path="/permission-denied" render={props => <PermissionDenied {...props} />} />
-            <Route render={props => <NotFound {...props} />} />
+            <Route path="/admin" render={props => <AdminLayout {...props} />} />
+            <Route path="/" render={props => <DefaultLayout {...props} />} />
           </Switch>
         </React.Suspense>
       </BrowserRouter>

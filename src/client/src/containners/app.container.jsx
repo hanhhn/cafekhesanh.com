@@ -2,19 +2,19 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import Routing from "../app.routing";
 
-class AppContainer extends Component<any> {
+class AppContainer extends Component {
   render() {
     return <Routing />;
   }
 }
 
 export default connect(
-  (state: any) => {
+  (state) => {
     return {
-      auth: state.authReducer
+      auth: state.authReducer,
     };
   },
-  (dispatch: any) => {
+  (dispatch) => {
     return {};
   }
 )(AppContainer);

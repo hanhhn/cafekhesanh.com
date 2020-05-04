@@ -54,7 +54,7 @@ namespace Cf.Api.Controllers
         {
             if (request == null)
             {
-                throw new ArgumentNullException("Param is invalid.");
+                throw new ArgumentNullException();
             }
 
             return _service.Save(request);
