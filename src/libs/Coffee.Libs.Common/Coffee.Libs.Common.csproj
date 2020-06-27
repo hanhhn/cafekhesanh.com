@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Copyright>Copyright © 2020 - Sai Gon Newport Corporation</Copyright>
+    <Product>Coffee.Libs.Common</Product>
+    <Authors>Sai Gon Newport Corporation</Authors>
+    <Version>3.1.6</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>SNP library</Description>
+  </PropertyGroup>
+
+</Project>

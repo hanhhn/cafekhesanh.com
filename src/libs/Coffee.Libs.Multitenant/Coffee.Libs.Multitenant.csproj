@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Sai Gon Newport Corporation</Authors>
+    <Company>Sai Gon Newport Corporation</Company>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>Copyright © 2020 - Sai Gon Newport Corporation</Copyright>
+    <Description>SNP library</Description>
+    <Version>3.1.6</Version>
+    <Product>Coffee.Libs.Multitenant</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SaasKit.Multitenancy" Version="1.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Coffee.Libs.Infrastructure\Coffee.Libs.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

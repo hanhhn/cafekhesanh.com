@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Copyright>Copyright © 2020 - Sai Gon Newport Corporation</Copyright>
+    <Authors>Sai Gon Newport Corporation</Authors>
+    <Company>Sai Gon Newport Corporation</Company>
+    <Product>Coffee.Libs.DataAccess.Identity</Product>
+    <Description>SNP library</Description>
+    <Version>3.1.6</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="DbContext\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Coffee.Libs.DataAccess\Coffee.Libs.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
