@@ -1,8 +1,8 @@
-﻿using Coffee.Libs.DataAccess.Repository;
-using Coffee.DataAccess.DbContext;
-using Coffee.DataAccess.Entities.Items;
+﻿using Coffee.DataAccess.DbContext;
+using Coffee.DataAccess.Entities;
+using Coffee.Libs.DataAccess.Repository;
 
-namespace Coffee.DataAccess.Repository.Prices
+namespace Coffee.DataAccess.Repository
 {
 	public class PriceRepository : BaseRepository<Price>, IPriceRepository
 	{

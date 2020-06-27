@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Coffee.Service.Dtos.Price
+namespace Coffee.Service.Dtos
 {
 	public class PriceDto
 	{

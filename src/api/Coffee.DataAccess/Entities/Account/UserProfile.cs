@@ -1,8 +1,9 @@
 ﻿using Coffee.Libs.DataAccess.EntityRoot;
+using Coffee.Libs.DataAccess.Identity.Entities;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Coffee.DataAccess.Entities.Account
+namespace Coffee.DataAccess.Entities
 {
 	public class UserProfile : BaseEntity<string>
 	{
@@ -15,10 +16,9 @@ namespace Coffee.DataAccess.Entities.Account
 		public string Email { get; set; }
 		public string Address { get; set; }
 		public string Thinking { get; set; }
-		public string FullName => string.Format("{0} {1}", LastName, FirstName);
 
 		[ForeignKey("User")]
 		public string UserId { get; set; }
-		public virtual User User { get; set; }
+		public virtual AppUser User { get; set; }
 	}
 }

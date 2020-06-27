@@ -1,7 +1,7 @@
-﻿using Coffee.Libs.DataAccess.Repository;
-using Coffee.DataAccess.Entities.Orders;
+﻿using Coffee.DataAccess.Entities;
+using Coffee.Libs.DataAccess.Repository;
 
-namespace Coffee.DataAccess.Repository.Trackings
+namespace Coffee.DataAccess.Repository
 {
 	public interface ITrackingRepository : IBaseRepository<Tracking>
 	{

@@ -1,9 +1,7 @@
 ﻿using Coffee.Libs.DataAccess.EntityRoot;
-using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
-namespace Coffee.DataAccess.Entities.Common
+namespace Coffee.DataAccess.Entities
 {
 	public class Province : IEntityRoot
 	{

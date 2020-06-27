@@ -1,7 +1,7 @@
-﻿using Coffee.Libs.DataAccess.Repository;
-using Coffee.DataAccess.Entities.Billing;
+﻿using Coffee.DataAccess.Entities;
+using Coffee.Libs.DataAccess.Repository;
 
-namespace Coffee.DataAccess.Repository.BillDetails
+namespace Coffee.DataAccess.Repository
 {
 	public interface IBillDetailRepository : IBaseRepository<BillDetail>
 	{

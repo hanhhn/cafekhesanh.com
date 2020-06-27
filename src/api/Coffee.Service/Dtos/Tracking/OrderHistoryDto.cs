@@ -1,9 +1,7 @@
-﻿using Coffee.Core.Enums;
-using Coffee.Service.Dtos.Method;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace Coffee.Service.Dtos.Tracking
+namespace Coffee.Service.Dtos
 {
 	public class OrderHistoryDto
 	{
@@ -12,10 +10,10 @@ namespace Coffee.Service.Dtos.Tracking
 		public IEnumerable<MethodDto> Services { get; set; }
 		public IEnumerable<TrackingDto> OrderStatus { get; set; }
 		public decimal Amount { get; set; }
-		public PaymentStatus PaymentStatus { get; set; }
+		//public PaymentStatus PaymentStatus { get; set; }
 		public DateTime DateOfReceipt { get; set; }
 		public string HoursOfReceipt { get; set; }
 		public string FullAddress { get; set; }
-		public string Payment => PaymentStatus.ToString();
+		//public string Payment => PaymentStatus.ToString();
 	}
 }

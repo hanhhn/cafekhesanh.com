@@ -1,6 +1,6 @@
 ﻿using Coffee.Libs.DataAccess.EntityRoot;
 
-namespace Coffee.DataAccess.Entities.Common
+namespace Coffee.DataAccess.Entities
 {
 	public class Contact : BaseEntity<int>
 	{

@@ -2,7 +2,7 @@
 
 namespace Coffee.DataAccess.Seed
 {
-	public class SeedDefault
+	public class DefaultSeeding
 	{
 		public static void Seeding(ModelBuilder builder)
 		{

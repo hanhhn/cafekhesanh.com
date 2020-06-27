@@ -1,9 +1,7 @@
 ﻿using Coffee.Libs.DataAccess.EntityRoot;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Coffee.DataAccess.Entities.Activity
+namespace Coffee.DataAccess.Entities
 {
 	public class LogActivity : BaseEntity<Guid>
 	{

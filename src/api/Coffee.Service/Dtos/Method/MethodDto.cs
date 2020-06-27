@@ -1,4 +1,4 @@
-﻿namespace Coffee.Service.Dtos.Method
+﻿namespace Coffee.Service.Dtos
 {
 	public class MethodDto
 	{

@@ -1,7 +1,7 @@
 ﻿using Coffee.Libs.DataAccess.EntityRoot;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Coffee.DataAccess.Entities.Billing
+namespace Coffee.DataAccess.Entities
 {
 	public class BillDetail : BaseEntity<int>
 	{

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Coffee.Service.Dtos.Page
+namespace Coffee.Service.Dtos
 {
 	public class PageDto
 	{

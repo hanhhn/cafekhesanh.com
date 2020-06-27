@@ -1,10 +1,4 @@
 ﻿using Coffee.DataAccess.Entities;
-using Coffee.DataAccess.Entities.Account;
-using Coffee.DataAccess.Entities.Billing;
-using Coffee.DataAccess.Entities.Common;
-using Coffee.DataAccess.Entities.Configuration;
-using Coffee.DataAccess.Entities.News;
-using Coffee.DataAccess.Entities.Orders;
 using Coffee.DataAccess.Seed;
 using Coffee.Libs.DataAccess.Identity.DbContext;
 using Coffee.Libs.Infrastructure;
@@ -44,7 +38,7 @@ namespace Coffee.DataAccess.DbContext
 
 			base.OnModelCreating(builder);
 			TablesBuilder.Build(builder);
-			SeedDefault.Seeding(builder);
+			DefaultSeeding.Seeding(builder);
 		}
 	}
 }

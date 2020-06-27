@@ -1,8 +1,6 @@
 ﻿using Coffee.Libs.DataAccess.EntityRoot;
-using Coffee.DataAccess.Entities.Orders;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Coffee.DataAccess.Entities.Common
+namespace Coffee.DataAccess.Entities
 {
 	public class Address : BaseEntity<int>
 	{

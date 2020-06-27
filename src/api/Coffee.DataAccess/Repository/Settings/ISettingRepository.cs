@@ -1,7 +1,7 @@
-﻿using Coffee.Libs.DataAccess.Repository;
-using Coffee.DataAccess.Entities.Configuration;
+﻿using Coffee.DataAccess.Entities;
+using Coffee.Libs.DataAccess.Repository;
 
-namespace Coffee.DataAccess.Repository.Settings
+namespace Coffee.DataAccess.Repository
 {
 	public interface ISettingRepository : IBaseRepository<Setting>
 	{

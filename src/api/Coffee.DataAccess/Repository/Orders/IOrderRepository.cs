@@ -1,7 +1,7 @@
 ﻿using Coffee.Libs.DataAccess.Repository;
-using Coffee.DataAccess.Entities.Orders;
+using Coffee.DataAccess.Entities;
 
-namespace Coffee.DataAccess.Repository.Orders
+namespace Coffee.DataAccess.Repository
 {
 	public interface IOrderRepository : IBaseRepository<Order>
 	{

@@ -1,19 +1,4 @@
-﻿using Coffee.DataAccess.Repository.Addresses;
-using Coffee.DataAccess.Repository.BillDetails;
-using Coffee.DataAccess.Repository.Bills;
-using Coffee.DataAccess.Repository.Contacts;
-using Coffee.DataAccess.Repository.Districts;
-using Coffee.DataAccess.Repository.OrderDetails;
-using Coffee.DataAccess.Repository.Orders;
-using Coffee.DataAccess.Repository.Pages;
-using Coffee.DataAccess.Repository.Posts;
-using Coffee.DataAccess.Repository.Prices;
-using Coffee.DataAccess.Repository.Provinces;
-using Coffee.DataAccess.Repository.Settings;
-using Coffee.DataAccess.Repository.Tags;
-using Coffee.DataAccess.Repository.Trackings;
-using Coffee.DataAccess.Repository.UserProfiles;
-using Coffee.DataAccess.Repository.Wards;
+﻿using Coffee.DataAccess.Repository;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Coffee.DataAccess

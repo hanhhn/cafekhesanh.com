@@ -1,8 +1,8 @@
-﻿using Coffee.Libs.DataAccess.Repository;
-using Coffee.DataAccess.Entities.Common;
+﻿using Coffee.DataAccess.Entities;
+using Coffee.Libs.DataAccess.Repository;
 using System.Linq;
 
-namespace Coffee.DataAccess.Repository.Addresses
+namespace Coffee.DataAccess.Repository
 {
 	public interface IAddressRepository : IBaseRepository<Address>
 	{

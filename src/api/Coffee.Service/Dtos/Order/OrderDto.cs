@@ -1,8 +1,7 @@
-﻿using Coffee.Core.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace Coffee.Service.Dtos.Order
+namespace Coffee.Service.Dtos
 {
 	public class OrderDto
 	{
@@ -16,7 +15,7 @@ namespace Coffee.Service.Dtos.Order
 		public string Street { get; set; }
 		public DateTime DateOfReceipt { get; set; }
 		public string HoursOfReceipt { get; set; }
-		public PaymentStatus Status { get; set; }
+		//public PaymentStatus Status { get; set; }
 		public string Note { get; set; }
 		public string FullAddress => string.Format("{0}, {1}, {2}, {3}.", Street, WardName, DistrictName, ProvinceName);
 		public int BillId { get; set; }

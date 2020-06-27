@@ -1,10 +1,10 @@
-﻿using Coffee.Libs.DataAccess.Repository;
-using Coffee.DataAccess.DbContext;
-using Coffee.DataAccess.Entities.Billing;
+﻿using Coffee.DataAccess.DbContext;
+using Coffee.DataAccess.Entities;
+using Coffee.Libs.DataAccess.Repository;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
-namespace Coffee.DataAccess.Repository.Bills
+namespace Coffee.DataAccess.Repository
 {
 	public class BillRepository : BaseRepository<Bill>, IBillRepository
 	{

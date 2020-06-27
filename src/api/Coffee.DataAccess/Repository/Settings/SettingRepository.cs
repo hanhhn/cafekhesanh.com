@@ -1,9 +1,9 @@
-﻿using Coffee.Libs.DataAccess.Repository;
-using Coffee.DataAccess.DbContext;
-using Coffee.DataAccess.Entities.Configuration;
+﻿using Coffee.DataAccess.DbContext;
+using Coffee.DataAccess.Entities;
+using Coffee.Libs.DataAccess.Repository;
 using System.Linq;
 
-namespace Coffee.DataAccess.Repository.Settings
+namespace Coffee.DataAccess.Repository
 {
 	public class SettingRepository : BaseRepository<Setting>, ISettingRepository
 	{

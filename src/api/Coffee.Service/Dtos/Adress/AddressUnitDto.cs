@@ -1,4 +1,4 @@
-﻿namespace Coffee.Service.Dtos.Adress
+﻿namespace Coffee.Service.Dtos
 {
 	public class AddressUnitDto
 	{

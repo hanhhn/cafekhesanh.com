@@ -1,6 +1,6 @@
 ﻿using Coffee.Libs.DataAccess.EntityRoot;
 
-namespace Coffee.DataAccess.Entities.Configuration
+namespace Coffee.DataAccess.Entities
 {
 	public class Setting : BaseEntity<string>
 	{

@@ -1,10 +1,11 @@
-﻿using Coffee.DataAccess.Entities.Orders;
+﻿using Coffee.DataAccess.Entities;
+using Coffee.Libs.DataAccess.PostgreSQL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Coffee.DataAccess.Mapping.Orders
 {
-	public class OrderConfigure : EntityTypeConfiguration<Order>
+	public class OrderConfigure : PostgreEntityTypeConfiguration<Order>
 	{
 		public override void Configure(EntityTypeBuilder<Order> builder)
 		{

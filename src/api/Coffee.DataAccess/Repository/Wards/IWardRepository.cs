@@ -1,7 +1,7 @@
-﻿using Coffee.Libs.DataAccess.Repository;
-using Coffee.DataAccess.Entities.Common;
+﻿using Coffee.DataAccess.Entities;
+using Coffee.Libs.DataAccess.Repository;
 
-namespace Coffee.DataAccess.Repository.Wards
+namespace Coffee.DataAccess.Repository
 {
 	public interface IWardRepository : IBaseRepository<Ward>
 	{

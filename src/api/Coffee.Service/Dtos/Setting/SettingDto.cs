@@ -1,4 +1,4 @@
-﻿namespace Coffee.Service.Dtos.Setting
+﻿namespace Coffee.Service.Dtos
 {
 	public class SettingDto
 	{

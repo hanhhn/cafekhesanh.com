@@ -1,8 +1,6 @@
-﻿using Coffee.Core.Infrastructure.Service;
-using Coffee.Service.Dtos.Account;
-using System.Threading.Tasks;
+﻿using Coffee.Libs.Service;
 
-namespace Coffee.Application.Accounts
+namespace Coffee.Service
 {
 	public interface IAccountService : IBaseService
 	{

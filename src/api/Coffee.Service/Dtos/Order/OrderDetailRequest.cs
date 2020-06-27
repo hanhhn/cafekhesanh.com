@@ -1,4 +1,4 @@
-﻿namespace Coffee.Service.Dtos.Order
+﻿namespace Coffee.Service.Dtos
 {
 	public class OrderDetailRequest
 	{

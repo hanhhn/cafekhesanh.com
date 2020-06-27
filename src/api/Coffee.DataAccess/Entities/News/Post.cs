@@ -1,7 +1,7 @@
 ﻿using Coffee.Libs.DataAccess.EntityRoot;
 using System;
 
-namespace Coffee.DataAccess.Entities.News
+namespace Coffee.DataAccess.Entities
 {
 	public class Post : BaseEntity<string>
 	{

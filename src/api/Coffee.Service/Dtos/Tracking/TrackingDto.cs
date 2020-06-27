@@ -1,6 +1,4 @@
-﻿using Coffee.Core.Enums;
-
-namespace Coffee.Service.Dtos.Tracking
+﻿namespace Coffee.Service.Dtos
 {
 	public class TrackingDto
 	{

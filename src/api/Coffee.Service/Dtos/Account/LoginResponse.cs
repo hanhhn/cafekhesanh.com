@@ -1,7 +1,6 @@
-﻿using Coffee.Core.BaseObject;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Coffee.Service.Dtos.Account
+namespace Coffee.Service.Dtos
 {
 	public class LoginResponse
 	{

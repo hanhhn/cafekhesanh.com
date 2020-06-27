@@ -1,4 +1,4 @@
-﻿namespace Coffee.Service.Dtos.Post
+﻿namespace Coffee.Service.Dtos
 {
 	public class TagDto
 	{

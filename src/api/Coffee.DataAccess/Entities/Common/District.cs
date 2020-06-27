@@ -1,9 +1,8 @@
 ﻿using Coffee.Libs.DataAccess.EntityRoot;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Coffee.DataAccess.Entities.Common
+namespace Coffee.DataAccess.Entities
 {
 	public class District : IEntityRoot
 	{

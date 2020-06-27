@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\libs\Coffee.Libs.Service\Coffee.Libs.Service.csproj" />
     <ProjectReference Include="..\Coffee.Common\Coffee.Common.csproj" />
     <ProjectReference Include="..\Coffee.DataAccess\Coffee.DataAccess.csproj" />
   </ItemGroup>

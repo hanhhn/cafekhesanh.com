@@ -1,10 +1,11 @@
-﻿using Coffee.DataAccess.Entities.Billing;
+﻿using Coffee.DataAccess.Entities;
+using Coffee.Libs.DataAccess.PostgreSQL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Coffee.DataAccess.Mapping.Billing
 {
-	public class BillConfigure : EntityTypeConfiguration<Bill>
+	public class BillConfigure : PostgreEntityTypeConfiguration<Bill>
 	{
 		public override void Configure(EntityTypeBuilder<Bill> builder)
 		{

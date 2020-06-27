@@ -1,6 +1,6 @@
 ﻿using Coffee.Libs.DataAccess.EntityRoot;
 
-namespace Coffee.DataAccess.Entities.Discounts
+namespace Coffee.DataAccess.Entities
 {
 	public class RewardPoint : BaseEntity<int>
 	{

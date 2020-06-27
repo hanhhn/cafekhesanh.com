@@ -1,4 +1,4 @@
-﻿namespace Coffee.Service.Dtos.Billing
+﻿namespace Coffee.Service.Dtos
 {
 	public class BillDetailDto
 	{

@@ -1,7 +1,7 @@
 ﻿using Coffee.Libs.DataAccess.EntityRoot;
 using System.Collections.Generic;
 
-namespace Coffee.DataAccess.Entities.Billing
+namespace Coffee.DataAccess.Entities
 {
 	public class Bill : BaseEntity<int>
 	{

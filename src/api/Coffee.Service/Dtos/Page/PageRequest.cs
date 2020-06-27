@@ -1,4 +1,4 @@
-﻿namespace Coffee.Service.Dtos.Page
+﻿namespace Coffee.Service.Dtos
 {
 	public class PageRequest
 	{

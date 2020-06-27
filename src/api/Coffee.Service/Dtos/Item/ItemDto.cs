@@ -1,4 +1,4 @@
-﻿namespace Coffee.Service.Dtos.Item
+﻿namespace Coffee.Service.Dtos
 {
 	public class ItemDto
 	{

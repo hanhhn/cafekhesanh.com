@@ -1,4 +1,4 @@
-﻿using Coffee.DataAccess.Mapping;
+﻿using Coffee.Libs.DataAccess.Mapping;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 

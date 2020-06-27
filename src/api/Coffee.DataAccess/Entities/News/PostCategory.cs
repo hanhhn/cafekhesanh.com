@@ -1,6 +1,6 @@
 ﻿using Coffee.Libs.DataAccess.EntityRoot;
 
-namespace Coffee.DataAccess.Entities.News
+namespace Coffee.DataAccess.Entities
 {
 	public class PostCategory : BaseEntity<int>
 	{

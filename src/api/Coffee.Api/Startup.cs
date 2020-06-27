@@ -1,22 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
-using Coffee.Api.Configurations;
+﻿using Coffee.Api.Configurations;
 using Coffee.DataAccess.DbContext;
-using Microsoft.AspNetCore.Authorization;
+using Coffee.Libs.DataAccess.Identity.Entities;
+using Coffee.Libs.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Coffee.Api
 {
@@ -32,23 +25,51 @@ namespace Coffee.Api
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+			services.AddTransient<IIdentityContext, IdentityContext>();
+
+			services.AddHttpContextAccessor();
+
 			services.AddCustomDbContext(Configuration);
 
-			//services.AddCustomIdentity();
+			services.AddCustomAutoMapper();
 
-			//services.AddAuthorizationHandler();
-			services.AddMapper();
+			services.AddCustomServices(Configuration);
+
+			services.AddCustomIdentity();
+
+			services.AddCustomAuthentication(Configuration);
 
 			services.AddCors();
 
-			services.AddControllers();
+			services.AddCustomApiVersion();
 
-			services.AddCustomServices();
+			services.AddControllers(options =>
+			{
+				options.Filters.Add(typeof(HttpGlobalExceptionFilter));
+				options.Filters.Add(typeof(ModelStateValidationFilter));
+			}).AddCustomValidation(typeof(Service.DependencyInjection))
+			.AddNewtonsoftJson();
+
+			// Customise default API behaviour
+			services.Configure<ApiBehaviorOptions>(options =>
+			{
+				options.SuppressModelStateInvalidFilter = true;
+			});
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ApplicationDbContext dbContext)
+		public void Configure(
+			IApplicationBuilder app,
+			IWebHostEnvironment env,
+			IApiVersionDescriptionProvider provider,
+			ApplicationDbContext dbContext,
+			RoleManager<AppRole> roleManager,
+			UserManager<AppUser> userManager)
 		{
+			dbContext.Database.EnsureCreated();
+			SeedDefaultData(roleManager, userManager);
+
+
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
@@ -65,14 +86,39 @@ namespace Coffee.Api
 				config.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
 			});
 
-			app.UseHttpsRedirection();
 			app.UseRouting();
+
 			app.UseAuthorization();
+
+			app.UseSwagger();
+
+			app.UseCors(builder => builder
+				.AllowAnyOrigin()
+				.AllowAnyMethod()
+				.AllowAnyHeader());
+
+			app.UseSwaggerUI(options =>
+			{
+				//build a swagger endpoint for each discovered API version
+				foreach (var description in provider.ApiVersionDescriptions)
+				{
+					options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName);
+				}
+			});
+
+			app.UseMiddleware<JwtToIdentityMiddleware>();
+
 			app.UseEndpoints(endpoints =>
 			{
+				endpoints.MapDefaultControllerRoute();
 				endpoints.MapControllers();
 			});
-			dbContext.Database.EnsureCreated();
+		}
+
+		private void SeedDefaultData(RoleManager<AppRole> roleManager, UserManager<AppUser> userManager)
+		{
+			var creator = new DefaultUserAndRoleCreator(roleManager, userManager);
+			creator.Create();
 		}
 	}
 }

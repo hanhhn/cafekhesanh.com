@@ -1,9 +1,9 @@
-﻿using Coffee.Libs.DataAccess.Repository;
-using Coffee.DataAccess.DbContext;
-using Coffee.DataAccess.Entities.News;
+﻿using Coffee.DataAccess.DbContext;
+using Coffee.DataAccess.Entities;
+using Coffee.Libs.DataAccess.Repository;
 using System.Linq;
 
-namespace Coffee.DataAccess.Repository.Posts
+namespace Coffee.DataAccess.Repository
 {
 	public class PostRepository : BaseRepository<Post>, IPostRepository
 	{
