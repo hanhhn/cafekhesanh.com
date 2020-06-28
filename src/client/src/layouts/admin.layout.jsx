@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import { Spinner } from "./spinner";
+import AdminHeaderLayout from "./admin/admin-header.layout";
+import AdminFooterLayout from "./admin/admin-footer.layout";
 
 const Dashboard = React.lazy(() => import("../pages/admin/dashboard"));
 const PermissionDenied = React.lazy(() => import("../pages/error/permission-denied"));
@@ -11,7 +13,7 @@ export default class AdminLayout extends Component {
     const baseUrl = this.props.match.url;
     return (
       <div>
-        <header>AdminLayout header</header>
+        <AdminHeaderLayout />
         <div className="container">
           <BrowserRouter>
             <React.Suspense fallback={<Spinner />}>
@@ -26,7 +28,7 @@ export default class AdminLayout extends Component {
             </React.Suspense>
           </BrowserRouter>
         </div>
-        <footer>AdminLayout footer</footer>
+        <AdminFooterLayout />
       </div>
     );
   }

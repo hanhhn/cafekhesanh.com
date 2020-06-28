@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import { Spinner } from "./spinner";
+import DefaultHeaderLayout from "./default/default-header.layout";
+import DefaultFooterLayout from "./default/default-footer.layout";
 
 const Home = React.lazy(() => import("../pages/home"));
 const SignIn = React.lazy(() => import("../pages/sign-in"));
@@ -11,7 +13,7 @@ export default class DefaultLayout extends Component {
   render() {
     return (
       <div>
-        <header>DefaultLayout header</header>
+        <DefaultHeaderLayout />
         <div className="container">
           <BrowserRouter>
             <React.Suspense fallback={<Spinner />}>
@@ -27,7 +29,7 @@ export default class DefaultLayout extends Component {
             </React.Suspense>
           </BrowserRouter>
         </div>
-        <footer>DefaultLayout footer</footer>
+        <DefaultFooterLayout />
       </div>
     );
   }
