@@ -1,19 +1,21 @@
 // declare const window: any;
 
 export function showSpinner() {
-  const blockUI = window.blockUI;
-
+  const blockUI = document.querySelector(".blockUI");
   if (blockUI) {
-    blockUI.style.display = "block";
+    const style = blockUI.getAttribute("style");
+    if (style !== "display: flex;") {
+      blockUI.setAttribute("style", "display: flex;");
+    }
   }
 }
 
 export function hideSpinner() {
-  const blockUI = window.blockUI;
+  const blockUI = document.querySelector(".blockUI");
 
   if (blockUI) {
-    setInterval(() => {
-      blockUI.style.display = "none";
-    }, 2000);
+    setTimeout(() => {
+      blockUI.setAttribute("style", "display: none;");
+    }, 300);
   }
 }
