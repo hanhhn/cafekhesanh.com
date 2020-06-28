@@ -17,11 +17,11 @@ export default class DefaultLayout extends Component {
   render() {
     return (
       <Layout>
-        <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
+        <Header style={{ position: "fixed", zIndex: 1, width: "100%", backgroundColor: "#fafafb" }}>
           <DefaultHeaderLayout />
         </Header>
-        <Content style={{ padding: "0 50px", marginTop: 64 }}>
-          <div className="container" style={{ padding: 24, minHeight: "calc(100vh - 136px)" }}>
+        <Content style={{ marginTop: 64 }}>
+          <div className="container" style={{ minHeight: "calc(100vh - 136px)" }}>
             <BrowserRouter>
               <React.Suspense fallback={<Spinner />}>
                 <Switch>
