@@ -4,9 +4,9 @@ const authReducer = (
   state = {
     isLogged: false,
     accessToken: null,
-    email: null
+    email: null,
   },
-  action: any
+  action
 ) => {
   switch (action.type) {
     case SignedInSuccess:
@@ -14,19 +14,19 @@ const authReducer = (
         ...state,
         isLogged: action.isLogged,
         accessToken: action.accessToken,
-        email: action.email
+        email: action.email,
       };
 
     case SignedInFail:
       return {
         ...state,
-        isLogged: false
+        isLogged: false,
       };
 
     case SignOut:
       return {
         ...state,
-        isLogged: false
+        isLogged: false,
       };
 
     default:
