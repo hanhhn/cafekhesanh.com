@@ -6,11 +6,11 @@ export class Spinner extends React.Component {
     showSpinner();
   }
 
-  componentDidMount() {
+  componentWillUnmount() {
     hideSpinner();
   }
 
   render() {
-    return <div className="spinner hidden" />;
+    return <div />;
   }
 }

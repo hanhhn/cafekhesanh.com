@@ -3,8 +3,9 @@ import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import { Spinner } from "./spinner";
 import AdminHeaderLayout from "./admin/admin-header.layout";
 import AdminFooterLayout from "./admin/admin-footer.layout";
+import "./admin/admin.layout.scss";
 
-const Dashboard = React.lazy(() => import("../pages/admin/dashboard"));
+const Dashboard = React.lazy(() => import("../pages/admin/dashboard/dashboard"));
 const PermissionDenied = React.lazy(() => import("../pages/error/permission-denied"));
 const NotFound = React.lazy(() => import("../pages/error/not-found"));
 
@@ -12,7 +13,7 @@ export default class AdminLayout extends Component {
   render() {
     const baseUrl = this.props.match.url;
     return (
-      <div>
+      <div className="full-container">
         <AdminHeaderLayout />
         <div className="container">
           <BrowserRouter>

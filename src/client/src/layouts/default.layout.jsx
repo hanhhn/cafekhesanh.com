@@ -3,16 +3,18 @@ import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import { Spinner } from "./spinner";
 import DefaultHeaderLayout from "./default/default-header.layout";
 import DefaultFooterLayout from "./default/default-footer.layout";
+import "./default/default.layout.scss";
 
-const Home = React.lazy(() => import("../pages/home"));
-const SignIn = React.lazy(() => import("../pages/sign-in"));
+
+const Home = React.lazy(() => import("../pages/home/home"));
+const SignIn = React.lazy(() => import("../pages/sign-in/sign-in"));
 const PermissionDenied = React.lazy(() => import("../pages/error/permission-denied"));
 const NotFound = React.lazy(() => import("../pages/error/not-found"));
 
 export default class DefaultLayout extends Component {
   render() {
     return (
-      <div>
+      <div className="full-container">
         <DefaultHeaderLayout />
         <div className="container">
           <BrowserRouter>
