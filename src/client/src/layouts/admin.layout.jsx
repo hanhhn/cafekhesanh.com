@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import { Spinner } from "./spinner";
 
-const SignIn = React.lazy(() => import("../pages/sign-in"));
+const Dashboard = React.lazy(() => import("../pages/admin/dashboard"));
 const PermissionDenied = React.lazy(() => import("../pages/error/permission-denied"));
 const NotFound = React.lazy(() => import("../pages/error/not-found"));
 
 export default class AdminLayout extends Component {
   render() {
+    const baseUrl = this.props.match.url;
     return (
       <div>
         <header>AdminLayout header</header>
@@ -16,10 +17,9 @@ export default class AdminLayout extends Component {
             <React.Suspense fallback={<Spinner />}>
               <Switch>
                 <Route exact path="/admin">
-                  <Redirect to="/dashboard" />
+                  <Redirect to={`${baseUrl}/dashboard`} />
                 </Route>
-                <Route path="/dashboard" render={(props) => <SignIn {...props} />} />
-                <Route path="/sign-in" render={(props) => <SignIn {...props} />} />
+                <Route path={`${baseUrl}/dashboard`} render={(props) => <Dashboard {...props} />} />
                 <Route path="/denied" render={(props) => <PermissionDenied {...props} />} />
                 <Route render={(props) => <NotFound {...props} />} />
               </Switch>

@@ -11,8 +11,8 @@ export default class Routing extends React.Component {
       <BrowserRouter>
         <React.Suspense fallback={<Spinner />}>
           <Switch>
-            <Route path="/" render={(props) => <DefaultLayout {...props} />} />
             <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
+            <Route path="/" render={(props) => <DefaultLayout {...props} />} />
           </Switch>
         </React.Suspense>
       </BrowserRouter>
