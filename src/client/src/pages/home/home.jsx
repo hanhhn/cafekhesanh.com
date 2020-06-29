@@ -1,7 +1,10 @@
 import React, { Component } from "react";
-import { Space, Card, Divider, Button, Affix } from "antd";
+import { Space, Card, Divider, Button, Typography } from "antd";
+
 import Product from "../../components/product/product";
 import "./home.scss";
+
+const { Title } = Typography;
 
 export default class Home extends Component {
   render() {
@@ -12,7 +15,7 @@ export default class Home extends Component {
             {/* <source media="(min-width:465px)" srcset="img_white_flower.jpg" /> */}
             {/* <img src={home} alt="Flowers" style={{ width: "100%" }} /> */}
           </picture>
-          <div>
+          <div className="content">
             <h1>We love people who code</h1>
             <p>
               We build products that empower developers and connect them to solutions that enable productivity, growth,
@@ -21,6 +24,13 @@ export default class Home extends Component {
             <Button>Default Button</Button>
             <Button type="primary">Primary Button</Button>
           </div>
+        </div>
+        <div className="home-item shipping">
+          <ul>
+            <li>Freeship1</li>
+            <li>Freeship2</li>
+            <li>Freeship3</li>
+          </ul>
         </div>
         <div className="home-item product">
           <h1>Cafe Mix</h1>

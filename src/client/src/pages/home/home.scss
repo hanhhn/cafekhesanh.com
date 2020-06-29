@@ -4,15 +4,46 @@
   position: -webkit-sticky;
   position: sticky;
   top: 64px;
-  background-color: yellow;
-  padding: 50px;
-  font-size: 20px;
+  background-color: #ffcf10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 50px;
+
+  .content {
+    text-align: center;
+
+    h1 {
+      font-weight: 700;
+      font-size: 50px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
 }
 
 .home-item {
   position: relative;
   z-index: $zIndex10;
-  height: 500px;
+  background-color: #ffffff;
+}
+
+.shipping {
+  background-color: #2b2d6e;
+  padding: 20px 0;
+  color: #ffffff;
+  font-weight: 700;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    align-self: center;
+    margin: 0;
+  }
 }
 
 .product {
