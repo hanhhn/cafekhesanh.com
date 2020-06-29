@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Space, Card, Divider, Button } from "antd";
-
+import { Space, Card, Divider, Button, Affix } from "antd";
+import Product from "../../components/product/product";
 import "./home.scss";
 
 export default class Home extends Component {
@@ -8,49 +8,35 @@ export default class Home extends Component {
     return (
       <>
         <div className="intro">
-          <h1>We love people who code</h1>
-          <p>
-            We build products that empower developers and connect them to solutions that enable productivity, growth,
-            and discovery.
-          </p>
-          <Button>Default Button</Button>
-          <Button type="primary">Primary Button</Button>
+          <picture>
+            {/* <source media="(min-width:465px)" srcset="img_white_flower.jpg" /> */}
+            {/* <img src={home} alt="Flowers" style={{ width: "100%" }} /> */}
+          </picture>
+          <div>
+            <h1>We love people who code</h1>
+            <p>
+              We build products that empower developers and connect them to solutions that enable productivity, growth,
+              and discovery.
+            </p>
+            <Button>Default Button</Button>
+            <Button type="primary">Primary Button</Button>
+          </div>
         </div>
-        <Divider type="horizontal" />
-        <div className="product">
-          <h1>Cafe mix</h1>
-          <Space direction="horizontal">
-            <Card title="Card" style={{ width: 300 }}>
-              <p>Card content</p>
-              <p>Card content</p>
-            </Card>
-            <Card title="Card" style={{ width: 300 }}>
-              <p>Card content</p>
-              <p>Card content</p>
-            </Card>
-          </Space>
+        <div className="home-item product">
+          <h1>Cafe Mix</h1>
+          <div>
+            <Product />
+          </div>
         </div>
-        <Divider type="horizontal" />
-        <div className="original">
+        <div className="home-item original">
           <h1>Cafe Nguyên Chất</h1>
-          <Space direction="horizontal">
-            <Card title="Card" style={{ width: 300 }}>
-              <p>Card content</p>
-              <p>Card content</p>
-            </Card>
-            <Card title="Card" style={{ width: 300 }}>
-              <p>Card content</p>
-              <p>Card content</p>
-            </Card>
-          </Space>
         </div>
-        <Divider type="horizontal" />
-        <div className="story">
-          <h1>Coffe Story</h1>
-          
+        <div className="home-item story">
+          <h1>Cafe Story</h1>
         </div>
-        <Divider type="horizontal" />
-        <div className="gallery">gallery</div>
+        <div className="home-item gallery">
+          <h1>Cafe Gallery</h1>
+        </div>
       </>
     );
   }

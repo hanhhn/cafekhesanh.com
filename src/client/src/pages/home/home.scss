@@ -1,0 +1,28 @@
+@import "../../var";
+
+.intro {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 64px;
+  background-color: yellow;
+  padding: 50px;
+  font-size: 20px;
+}
+
+.home-item {
+  position: relative;
+  z-index: $zIndex10;
+  height: 500px;
+}
+
+.product {
+}
+
+.original {
+}
+
+.story {
+}
+
+.gallery {
+}

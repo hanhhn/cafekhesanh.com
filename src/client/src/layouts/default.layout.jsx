@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import { Spinner } from "./spinner";
-import { Layout } from "antd";
-
-import DefaultHeaderLayout from "./default/default-header.layout";
-import DefaultFooterLayout from "./default/default-footer.layout";
+import { Layout, Menu } from "antd";
 import "./default/default.layout.scss";
 
 const { Header, Footer, Content } = Layout;
@@ -17,8 +14,12 @@ export default class DefaultLayout extends Component {
   render() {
     return (
       <Layout>
-        <Header style={{ position: "fixed", zIndex: 1, width: "100%", backgroundColor: "#fafafb" }}>
-          <DefaultHeaderLayout />
+        <Header style={{ position: "fixed", zIndex: 9999, width: "100%", backgroundColor: "#fafafb" }}>
+          <Menu theme="light" mode="horizontal" defaultSelectedKeys={["2"]} style={{ backgroundColor: "#fafafb" }}>
+            <Menu.Item key="1">nav 1</Menu.Item>
+            <Menu.Item key="2">nav 2</Menu.Item>
+            <Menu.Item key="3">nav 3</Menu.Item>
+          </Menu>
         </Header>
         <Content style={{ marginTop: 64 }}>
           <div className="container" style={{ minHeight: "calc(100vh - 136px)" }}>
@@ -37,8 +38,8 @@ export default class DefaultLayout extends Component {
             </BrowserRouter>
           </div>
         </Content>
-        <Footer style={{ textAlign: "center" }}>
-          <DefaultFooterLayout />
+        <Footer style={{ textAlign: "center", position: "relative" }}>
+          <h1>Footer</h1>
         </Footer>
       </Layout>
     );
