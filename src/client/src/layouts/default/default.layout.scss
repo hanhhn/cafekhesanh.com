@@ -1,0 +1,48 @@
+@import "../../var";
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: $zIndex9999;
+  background-color: $backgroundColorLight;
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 60px;
+    }
+
+    .left {
+    }
+    .right {
+    }
+
+    .logo {
+      font-size: 25px;
+      margin-left: 110px;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      padding: 0;
+      margin: 0 110px 0 0;
+
+      .menu-item {
+        cursor: pointer;
+        padding: 5px 10px;
+        font-size: 12px;
+        margin: 0 0 0 20px;
+      }
+    }
+  }
+}

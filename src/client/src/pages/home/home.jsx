@@ -31,7 +31,6 @@ export default class Home extends Component {
           </ul>
         </div>
         <div className="home-item product">
-          <h1>Cafe Mix</h1>
           <div className="list">
             <Product />
             <Product />
