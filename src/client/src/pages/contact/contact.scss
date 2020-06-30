@@ -1,0 +1,16 @@
+@import "../../var";
+
+.full-container {
+  display: grid;
+  grid-template-columns: [left] repeat(12, [col-start] 1fr [col-end]) [right];
+  grid-column-gap: 1.5vw;
+  grid-row-gap: 1.5vh;
+  margin: 0px 1.5vw;
+}
+
+.item {
+  grid-column: span 4 / auto;
+  height: 200px;
+  padding: 30px;
+  background-color: #a0fcfc;
+}

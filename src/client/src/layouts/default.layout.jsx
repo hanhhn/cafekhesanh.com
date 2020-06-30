@@ -6,6 +6,8 @@ import "./default/default.layout.scss";
 
 const { Header, Footer, Content } = Layout;
 const Home = React.lazy(() => import("../pages/home/home"));
+const Product = React.lazy(() => import("../pages/product/product"));
+const Contact = React.lazy(() => import("../pages/contact/contact"));
 const SignIn = React.lazy(() => import("../pages/sign-in/sign-in"));
 const PermissionDenied = React.lazy(() => import("../pages/error/permission-denied"));
 const NotFound = React.lazy(() => import("../pages/error/not-found"));
@@ -30,6 +32,8 @@ export default class DefaultLayout extends Component {
                     <Redirect to="/trang-chu" />
                   </Route>
                   <Route path="/trang-chu" render={(props) => <Home {...props} />} />
+                  <Route path="/san-pham" render={(props) => <Product {...props} />} />
+                  <Route path="/lien-he" render={(props) => <Contact {...props} />} />
                   <Route path="/dang-nhap" render={(props) => <SignIn {...props} />} />
                   <Route path="/denied" render={(props) => <PermissionDenied {...props} />} />
                   <Route render={(props) => <NotFound {...props} />} />
