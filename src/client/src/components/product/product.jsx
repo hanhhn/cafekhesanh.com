@@ -4,15 +4,31 @@ import "./product.scss";
 export default class Product extends Component {
   render() {
     return (
-      <section>
-        <a href="">
-          <img
-            src="https://images.ctfassets.net/vcddf3kukyq9/2aMGtYKdiEzCHDgxDSijpb/539bc36eca9dd78a84e841779d9119a3/_New--Hair-Removal-Ecomm__1_.jpg"
-            style={{ width: "200px", height: "250px" }}
-          />
-          <h3>Product header</h3>
-          <p>Quality shaving supplies + easy-to-use wax for convenience and comfort. </p>
+      <section className="prod">
+        <a className="summary" href=".">
+          <div className="image">
+            <label className="badge">
+              <span>New</span>
+            </label>
+            <picture>
+              <img
+                src="https://images.ctfassets.net/vcddf3kukyq9/2aMGtYKdiEzCHDgxDSijpb/539bc36eca9dd78a84e841779d9119a3/_New--Hair-Removal-Ecomm__1_.jpg"
+                alt=""
+              />
+            </picture>
+          </div>
+          <div className="information">
+            <h3 className="name">Product header</h3>
+            <p className="description">Product description</p>
+            <p className="price">100.000 đ</p>
+          </div>
         </a>
+        <ul className="thumb">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>3</li>
+        </ul>
       </section>
     );
   }

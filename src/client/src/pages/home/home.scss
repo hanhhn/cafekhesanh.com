@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 50px;
+  padding: 150px 50px;
 
   .content {
     text-align: center;
@@ -28,9 +28,10 @@
   position: relative;
   z-index: $zIndex10;
   background-color: #ffffff;
+  padding: 50px 0px;
 }
 
-.shipping {
+.horizontal-list {
   background-color: #2b2d6e;
   padding: 20px 0;
   color: #ffffff;
@@ -47,13 +48,81 @@
 }
 
 .product {
+  text-align: center;
+
+  .list {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.category {
+  text-align: center;
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .item {
+      max-width: 500px;
+
+      h1 {
+        text-align: center;
+      }
+
+      padding: 0 10px;
+      text-align: justify;
+    }
+  }
 }
 
 .original {
+  text-align: center;
+
+  .list {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .story {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+
+  .caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image {
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
 .gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(225, 236, 244, 1);
+  padding: 50px 0;
+
+  .list {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    min-height: 300px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

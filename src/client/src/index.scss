@@ -1,10 +1,12 @@
+@import "./var";
+
 html,
 body {
   height: 100%;
 }
 body {
   margin: 0;
-  background: #fafafa;
+  background: $backgroundColorDark;
 
   @keyframes spin {
     from {

@@ -1,0 +1,54 @@
+@import "../../var";
+
+.prod {
+  display: block;
+  text-align: center;
+  padding: 10px;
+
+  .summary {
+    color: #000000;
+  }
+
+  .image {
+    display: block;
+    position: relative;
+
+    .badge {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #f48024;
+      border-radius: 40px;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+    }
+
+    img {
+      width: 100%;
+      position: relative;
+    }
+  }
+
+  .information {
+    margin-top: 20px;
+  }
+
+  .thumb {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 10px;
+      margin: 0 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #f48024;
+    }
+  }
+}
