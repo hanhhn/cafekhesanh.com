@@ -68,9 +68,18 @@ export default class Home extends Component {
         <div className="home-item original">
           <h1>Cafe Nguyên Chất</h1>
           <div className="list">
-            <Product />
-            <Product />
-            <Product />
+            <div className="item1">
+              <Product />
+            </div>
+            <div className="item2">
+              <Product />
+            </div>
+            <div className="item3">
+              <Product />
+            </div>
+            <div className="item4">
+              <Button type="primary">Primary Button</Button>
+            </div>
           </div>
         </div>
         <div className="home-item horizontal-list">

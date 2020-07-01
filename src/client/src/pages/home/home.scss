@@ -51,8 +51,9 @@
   text-align: center;
 
   .list {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: 10px;
   }
 }
 
@@ -81,8 +82,25 @@
   text-align: center;
 
   .list {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: [left] minmax(120px, 1fr) repeat(12, [col-start] 1fr [col-end]) minmax(120px, 1fr) [right];
+    grid-column-gap: 24px;
+
+    .item1 {
+      grid-column: 1 col-start / 4 col-end;
+    }
+
+    .item2 {
+      grid-column: 5 col-start / 8 col-end;
+    }
+
+    .item3 {
+      grid-column: 9 col-start / 12 col-end;
+    }
+
+    .item4 {
+      grid-column: left / right;
+    }
   }
 }
 
