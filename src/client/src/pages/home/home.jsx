@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Card } from "antd";
-import Product from "../../components/product/product";
+import Product from "../../components/item/item";
 import "./home.scss";
 
 const { Meta } = Card;
@@ -32,10 +32,18 @@ export default class Home extends Component {
         </div>
         <div className="home-item product">
           <div className="list">
-            <Product />
-            <Product />
-            <Product />
-            <Product />
+            <div className="item">
+              <Product />
+            </div>
+            <div className="item">
+              <Product />
+            </div>
+            <div className="item">
+              <Product />
+            </div>
+            <div className="item">
+              <Product />
+            </div>
           </div>
           <div>
             <Button type="primary">Primary Button</Button>

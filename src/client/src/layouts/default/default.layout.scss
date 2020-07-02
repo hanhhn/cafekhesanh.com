@@ -7,11 +7,16 @@ header {
   z-index: $zIndex9999;
   background-color: $backgroundColorLight;
 
+  .container{
+    max-width: 960px;
+  }
+
   .mobile {
     display: none;
   }
 
   .desktop {
+    margin: 0 auto;
     nav {
       display: flex;
       flex-direction: row;
@@ -27,15 +32,15 @@ header {
 
     .logo {
       font-size: 25px;
-      margin-left: 110px;
+      // margin-left: 110px;
     }
 
     .menu {
       display: flex;
       flex-direction: row;
       list-style: none;
-      padding: 0;
-      margin: 0 110px 0 0;
+      margin: 0;
+      // margin: 0 110px 0 0;
 
       .menu-item {
         cursor: pointer;

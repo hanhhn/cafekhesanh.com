@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import { Spinner } from "./spinner";
 import DefaultHeaderLayout from "./default/default-header.layout";
-import DefaultFooterLayout from "./default/default-header.layout";
+import DefaultFooterLayout from "./default/default-footer.layout";
 import "./default/default.layout.scss";
 
 const Home = React.lazy(() => import("../pages/home/home"));
@@ -17,10 +17,11 @@ export default class DefaultLayout extends Component {
   render() {
     return (
       <div>
-        <DefaultHeaderLayout />
         <main className="container" style={{ minHeight: "calc(100vh - 136px)" }}>
           <BrowserRouter>
             <React.Suspense fallback={<Spinner />}>
+              <DefaultHeaderLayout />
+
               <Switch>
                 <Route exact path="/">
                   <Redirect to="/trang-chu" />
@@ -33,10 +34,10 @@ export default class DefaultLayout extends Component {
                 <Route path="/denied" render={(props) => <PermissionDenied {...props} />} />
                 <Route render={(props) => <NotFound {...props} />} />
               </Switch>
+              <DefaultFooterLayout />
             </React.Suspense>
           </BrowserRouter>
         </main>
-        <DefaultFooterLayout />
       </div>
     );
   }

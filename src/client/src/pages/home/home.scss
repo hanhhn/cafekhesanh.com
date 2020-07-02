@@ -1,5 +1,11 @@
 @import "../../var";
 
+.home-item {
+  position: relative;
+  z-index: $zIndex10;
+  background-color: #ffffff;
+}
+
 .intro {
   position: -webkit-sticky;
   position: sticky;
@@ -24,13 +30,6 @@
   }
 }
 
-.home-item {
-  position: relative;
-  z-index: $zIndex10;
-  background-color: #ffffff;
-  padding: 50px 0px;
-}
-
 .horizontal-list {
   background-color: #2b2d6e;
   padding: 20px 0;
@@ -52,8 +51,12 @@
 
   .list {
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-column-gap: 10px;
+    grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
+    grid-column-gap: 24px;
+
+    .item {
+      grid-column: span 3 / auto;
+    }
   }
 }
 
@@ -83,7 +86,7 @@
 
   .list {
     display: grid;
-    grid-template-columns: [left] minmax(120px, 1fr) repeat(12, [col-start] 1fr [col-end]) minmax(120px, 1fr) [right];
+    grid-template-columns: [left] repeat(12, [col-start] 1fr [col-end]) [right];
     grid-column-gap: 24px;
 
     .item1 {
@@ -133,14 +136,11 @@
 
   .list {
     display: grid;
-    grid-gap: 40px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    min-height: 300px;
-  }
+    grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
+    grid-column-gap: 24px;
 
-  .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .item {
+      grid-column: span 3 / auto;
+    }
   }
 }

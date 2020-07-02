@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./product.scss";
+import "./item.scss";
 
-export default class Product extends Component {
+export default class Item extends Component {
   render() {
     return (
       <section className="prod">
