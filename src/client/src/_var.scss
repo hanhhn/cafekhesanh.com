@@ -10,8 +10,44 @@ $zIndex9999: 9999;
 $borderColor: "#212529";
 $borderCorlorLight: "#dee2e6";
 
-
 $backgroundColorLight: rgb(239, 237, 243);
 $backgroundColorDark: rgb(250, 245, 243);
 $fontColorLight: rgb(43, 20, 83);
 $fontColorDark: rgb(43, 20, 83);
+
+@mixin media-break($media) {
+  @if $media != "xs" {
+    // xs devices (landscape phones, 575px and down)
+    @media (max-width: 575px) {
+      @content;
+    }
+  }
+
+  @if $media != "sm" {
+    // Small devices (landscape phones, 576px and up)
+    @media screen and (min-width: 576px) {
+      @content;
+    }
+  }
+
+  @if $media != "md" {
+    // Medium devices (tablets, 768px and up)
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $media != "lg" {
+    // Large devices (desktops, 992px and up)
+    @media screen and (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @if $media != "xl" {
+    // Extra large devices (large desktops, 1200px and up)
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}

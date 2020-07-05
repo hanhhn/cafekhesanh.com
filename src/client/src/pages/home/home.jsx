@@ -32,16 +32,13 @@ export default class Home extends Component {
         </div>
         <div className="home-item product">
           <div className="list">
-            <div className="item">
+            <div className="item item1">
               <Product />
             </div>
-            <div className="item">
+            <div className="item item2">
               <Product />
             </div>
-            <div className="item">
-              <Product />
-            </div>
-            <div className="item">
+            <div className="item item3">
               <Product />
             </div>
           </div>
@@ -76,16 +73,16 @@ export default class Home extends Component {
         <div className="home-item original">
           <h1>Cafe Nguyên Chất</h1>
           <div className="list">
-            <div className="item1">
+            <div className="item item1">
               <Product />
             </div>
-            <div className="item2">
+            <div className="item item2">
               <Product />
             </div>
-            <div className="item3">
+            <div className="item item3">
               <Product />
             </div>
-            <div className="item4">
+            <div className="item item4">
               <Button type="primary">Primary Button</Button>
             </div>
           </div>
